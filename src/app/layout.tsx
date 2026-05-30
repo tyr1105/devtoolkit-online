@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { tools } from "@/lib/tools";
 
@@ -14,12 +15,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col antialiased">
         <header className="border-b border-[var(--border)] bg-[var(--bg-secondary)]">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="text-xl font-bold text-[var(--accent)]">DevToolKit</a>
+            <Link href="/" className="text-xl font-bold text-[var(--accent)]">DevToolKit</Link>
             <nav className="flex gap-4 text-sm text-[var(--text-secondary)]">
-              <a href="/" className="hover:text-white">All Tools</a>
-              <a href="/json-formatter" className="hover:text-white">JSON</a>
-              <a href="/base64" className="hover:text-white">Base64</a>
-              <a href="/qr-code" className="hover:text-white">QR Code</a>
+              <Link href="/" className="hover:text-white">All Tools</Link>
+              <Link href="/json-formatter" className="hover:text-white">JSON</Link>
+              <Link href="/base64" className="hover:text-white">Base64</Link>
+              <Link href="/qr-code" className="hover:text-white">QR Code</Link>
             </nav>
           </div>
         </header>

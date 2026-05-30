@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { tools, categories } from "@/lib/tools";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-4 text-[var(--text-secondary)]">{group.label}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {group.tools.map((tool) => (
-              <a
+              <Link
                 key={tool.id}
                 href={tool.path}
                 className="block p-5 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--accent)] transition-colors"
@@ -32,7 +33,7 @@ export default function Home() {
                   <h3 className="font-semibold text-lg">{tool.name}</h3>
                 </div>
                 <p className="text-sm text-[var(--text-secondary)]">{tool.description}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
